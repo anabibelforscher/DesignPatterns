@@ -1,4 +1,4 @@
-package dio.designpatterns.gof;
+package dio.designpatterns.gof.singleton;
 
 public class SingletonLazyHolder {
 
