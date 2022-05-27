@@ -1,5 +1,6 @@
 package dio.designpatterns.gof;
 
+import dio.designpatterns.gof.facade.Facade;
 import dio.designpatterns.gof.singleton.SingletonEager;
 import dio.designpatterns.gof.singleton.SingletonLazy;
 import dio.designpatterns.gof.singleton.SingletonLazyHolder;
@@ -26,6 +27,7 @@ public class Test {
         System.out.println(singletonLazyHolder);
 
         //Strategy
+        System.out.println("------------------------------------");
         Behavior normal = new NormalBehavior();
         Behavior defensive = new DefensiveBehavior();
         Behavior aggressive = new AggressiveBehavior();
@@ -35,5 +37,11 @@ public class Test {
         robot.move();
         robot.setBehavior(defensive);
         robot.move();
+
+        //Facade
+        System.out.println("------------------------------------");
+        Facade facade = new Facade();
+
+        facade.migrarCliente("Dom", "00000-000");
     }
 }
